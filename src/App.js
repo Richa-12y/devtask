@@ -3,19 +3,27 @@ import "./App.css";
 import FeedbackForm from "./component/FeedbackForm";
 
 function App() {
-  const [name, setName] = useState("");
-  const [last, setLast] = useState("");
-  const [email, setEmail] = useState("");
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    feedback: "",
+  });
+
+  const [errors, setErrors] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    feedback: "",
+  });
   return (
     <div className="App">
       <section className="w-full h-screen bg-[#a4a3a3] flex flex-col justify-center items-center">
         <FeedbackForm
-          name={name}
-          setName={setName}
-          last={last}
-          setLast={setLast}
-          email={email}
-          setEmail={setEmail}
+          formData={formData}
+          setFormData={setFormData}
+          errors={errors}
+          setErrors={setErrors}
         />
       </section>
     </div>
