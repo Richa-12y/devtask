@@ -12,7 +12,6 @@ function FormInput({
   const inputClassName = `p-2 ${
     fullWidth ? "w-full" : "w-[350px]"
   } outline-0 rounded-md bg-transparent border-2 border-gray-500 cursor-pointer placeholder:italic placeholder:text-[grey] text-white`;
-  // console.log(formData, "checkdata here");
   return (
     <label className="flex flex-col">
       <span className="flex font-bold text-lg text-gray-500 cursor-pointer">
